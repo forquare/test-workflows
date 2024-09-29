@@ -33,6 +33,7 @@ jobs:
           echo "skip:release: ${{ steps.check.outputs.skip_release }}"
           echo "PR merged: ${{ github.event.pull_request.merged }}"
           echo "GitHub Ref: ${{ github.ref }}"
+          echo "File: ${{ steps.get_files.outputs.all }}"
 
 
   tag:
