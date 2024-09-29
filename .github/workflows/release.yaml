@@ -28,6 +28,11 @@ jobs:
             echo "Skipping release - default"
             echo "skip_release=true" >> $GITHUB_OUTPUT
           fi
+      - name: 'Debugging'
+        run: |
+          echo "skip:release: ${{ steps.check.outputs.skip_release }}"
+          echo "PR merged: ${{ github.event.pull_request.merged }}"
+          echo "GitHub Ref: ${{ github.ref }}"
 
 
   tag:
