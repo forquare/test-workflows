@@ -38,7 +38,7 @@ jobs:
 
   tag:
     needs: check_files
-    if: github.ref == 'main' && github.event.pull_request.merged == true && needs.check_files.outputs.skip_release == 'false'
+    if: github.ref == 'refs/heads/main' && github.event.pull_request.merged == true && needs.check_files.outputs.skip_release == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -52,7 +52,7 @@ jobs:
 
   build_and_release:
     needs: tag
-    if: github.ref == 'main' && github.event.pull_request.merged == true && needs.check_files.outputs.skip_release == 'false'
+    if: github.ref == 'refs/heads/main' && github.event.pull_request.merged == true && needs.check_files.outputs.skip_release == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
