@@ -1,4 +1,4 @@
-name: Main Workflow
+name: Auto Bump and Tag
 
 on:
   push:
@@ -7,6 +7,6 @@ on:
 
 jobs:
   call_increment_version:
-    uses: forquare/reusable-workflows/.github/workflows/increment-version.yaml@main
+    uses: forquare/reusable-workflows/.github/workflows/increment-version-and-tag.yaml@main
     with:
       semver_part: ${{ github.event.pull_request.labels.* }} # Configure to get the part from PR labels
