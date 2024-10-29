@@ -1,0 +1,12 @@
+name: Release Workflow
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  call_release_with_goreleaser:
+    uses: forquare/reusable-workflows/.github/workflows/release-with-goreleaser.yaml@main
+    with:
+      tag_name: ${{ github.ref_name }}

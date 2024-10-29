@@ -1,0 +1,12 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call_increment_version:
+    uses: forquare/reusable-workflows/.github/workflows/increment-version.yaml@main
+    with:
+      semver_part: ${{ github.event.pull_request.labels.* }} # Configure to get the part from PR labels

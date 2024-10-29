@@ -1,0 +1,12 @@
+name: PR Label Validation WorkfloyGw
+
+on:
+  pull_request:
+    types: [labeled, unlabeled, opened, reopened, synchronize]
+
+jobs:
+  validate_pr_labels:
+    uses: forquare/reusable-workflows/.github/workflows/validate-labels.yaml@main
+    with:
+      valid_labels: ["major", "minor", "patch"]
+      pull_request_number: ${{ github.event.pull_request.number }}
