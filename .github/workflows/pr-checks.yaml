@@ -5,4 +5,4 @@ on:
 
 jobs:
   pr-checks:
-    uses: forquare/reusable-workflows/.github/workflows/pr-commit-check@main
+    uses: forquare/reusable-workflows/.github/workflows/pr-commit-check.yaml@main
