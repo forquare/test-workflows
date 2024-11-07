@@ -17,7 +17,28 @@ jobs:
         uses: mathieudutour/github-tag-action@a22cf08638b34d5badda920f9daf6e72c477b07b #v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          release_branches: main
-          default_bump: minor
-          tag_prefix: "v"
-          custom_release_rules: fix:patch:Bug Fixes,style:patch:Code Styling,refactor:patch:Code Refactoring,test:patch:Tests,chore:patch:Chores,build:patch:Builds,ci:patch:Continuous Integrations,docs:patch:Documentation,feat:minor:New Features,perf:minor:Performance Improvements,revert:minor:Reverts
+
+
+#refactor:patch:Code Refactoring
+#build:patch:Builds
+#ci:patch:Continuous Integrations
+#docs:patch:Documentation
+#
+#revert:minor:Reverts
+#
+#
+#
+#Patch:
+#  - fix
+#  - perf
+#
+#Minor:
+#  - feat
+#  -
+#
+#None:
+#  - style
+#  - test
+#  - chore
+#  - refactor
+#  -
