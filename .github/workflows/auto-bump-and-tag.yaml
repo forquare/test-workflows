@@ -19,26 +19,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
-#refactor:patch:Code Refactoring
-#build:patch:Builds
-#ci:patch:Continuous Integrations
-#docs:patch:Documentation
-#
-#revert:minor:Reverts
-#
-#
-#
 #Patch:
 #  - fix
 #  - perf
-#
-#Minor:
-#  - feat
-#  -
-#
-#None:
+#  - revert
+#  - refactor
+#  - build
+#  - ci
+#  - docs
 #  - style
 #  - test
 #  - chore
-#  - refactor
-#  -
+
+#Minor:
+#  - feat
+
+#Major:
+#  - BREAKING CHANGE (in body)
